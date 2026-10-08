@@ -212,7 +212,7 @@ git push -u origin main
 ```
 # Bài 5: ESP32 OneButton điều khiển hai LED
 
-## 11. Giới thiệu
+## 1. Giới thiệu
 
 Phát triển từ dự án OneButton ở Bài 4, bổ sung thêm một LED ngoài và một nút nhấn để điều khiển hai LED bằng cùng một nút.
 
@@ -220,7 +220,7 @@ Phát triển từ dự án OneButton ở Bài 4, bổ sung thêm một LED ngo�
 * **LED2:** LED ngoài trên breadboard (GPIO4).
 * **Button:** Nút nhấn mới (GPIO18).
 
-## 12. Chức năng
+## 2. Chức năng
 
 | Thao tác     | Chức năng                           |
 | ------------ | ----------------------------------- |
@@ -236,12 +236,12 @@ LED1 → LED2 → LED1 → ...
 
 Single click chỉ tác động đến LED đang được chọn.
 
-## 13. Phần cứng
+## 3. Phần cứng
 
 LED2 được mắc:
 
 ```text
-GPIO4 ---- 220Ω ---- LED2 ---- GND
+GPIO4 ---- 1kΩ ---- LED2 ---- GND
 ```
 
 Nút nhấn:
@@ -252,7 +252,7 @@ GPIO18 ---- Button ---- GND
 
 LED1 sử dụng LED built-in của ESP32.
 
-## 14. Phần mềm
+## 4. Phần mềm
 
 Sử dụng thư viện OneButton để xử lý:
 
@@ -272,7 +272,7 @@ selectedLED = 2;  // LED2
 
 Chức năng nhấp nháy sử dụng `millis()` với thời gian **200 ms**.
 
-## 15. Kết quả
+## 5. Kết quả
 
 * Single click: ON/OFF LED đang chọn.
 * Double click: chuyển LED1 ↔ LED2.
@@ -280,13 +280,4 @@ Chức năng nhấp nháy sử dụng `millis()` với thời gian **200 ms**.
 * Dự án được tạo bằng PlatformIO và quản lý bằng Git.
 * Toàn bộ mã nguồn và tài liệu được push lên GitHub ở chế độ Public.
 
-## 11. Kết quả mong đợi
 
-Sau khi hoàn thành:
-
-* Single click → LED ON/OFF.
-* Double click → LED nhấp nháy.
-* Không cần giữ nút lâu hơn 1 giây.
-* Mã nguồn được quản lý bằng Git.
-* Mã nguồn được push lên GitHub.
-* Repository GitHub ở chế độ Public.
